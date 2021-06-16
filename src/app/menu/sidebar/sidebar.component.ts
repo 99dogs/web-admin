@@ -52,6 +52,12 @@ export const ROUTES: RouteInfo[] = [
         icon: 'fa-bank',
         class: ''
     },
+    {
+        path: '/reclamacao-sugestao',
+        title: 'Feedbacks',
+        icon: 'fa-commenting',
+        class: ''
+    },
 ];
 
 @Component({

@@ -12,7 +12,7 @@
                             <th>Data</th>
                             <th>Dog walker</th>
                             <th>Total</th>
-                            <th>Status</th>
+                            <th>Situação</th>
                             <th class="text-right"></th>
                         </thead>
                         <tbody>
@@ -33,7 +33,7 @@
                                     <button class="btn btn-success btn-sm">Concluído</button>
                                 </td>
                                 <td class="text-right">
-                                    <button class="btn btn-primary btn-sm">Detalhes</button>
+                                    <a [routerLink]="['/deposito/detalhes', 10002]"><button class="btn btn-primary btn-sm">Detalhes</button></a>
                                 </td>
                             </tr>
                             <tr>
@@ -53,7 +53,7 @@
                                     <button class="btn btn-warning btn-sm">Pendente</button>
                                 </td>
                                 <td class="text-right">
-                                    <button class="btn btn-primary btn-sm">Detalhes</button>
+                                    <a [routerLink]="['/deposito/detalhes', 10003]"><button class="btn btn-primary btn-sm">Detalhes</button></a>
                                 </td>
                             </tr>
                         </tbody>

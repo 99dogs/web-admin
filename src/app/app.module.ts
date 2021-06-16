@@ -19,6 +19,11 @@ import { FormaDePagamentoComponent } from './pages/forma-de-pagamento/forma-de-p
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { DepositoComponent } from './pages/deposito/deposito.component';
 import { LoginService } from "./services/login/login.service";
+import { ConfiguracaoBaseEditComponent } from './pages/configuracao-base/edit/configuracao-base-edit/configuracao-base-edit.component';
+import { DepositoDetalhesComponent } from './pages/deposito/detalhes/deposito-detalhes/deposito-detalhes.component';
+import { DogwalkerDetalhesComponent } from './pages/dogwalker/detalhes/dogwalker-detalhes/dogwalker-detalhes.component';
+import { ReclamacaoSugestaoComponent } from './pages/reclamacao-sugestao/reclamacao-sugestao.component';
+import { ReclamacaoSugestaoDetalhesComponent } from './pages/reclamacao-sugestao/detalhes/reclamacao-sugestao-detalhes/reclamacao-sugestao-detalhes.component';
 
 
 @NgModule({
@@ -35,13 +40,22 @@ import { LoginService } from "./services/login/login.service";
     FormaDePagamentoComponent,
     PerfilComponent,
     DepositoComponent,
+    ConfiguracaoBaseEditComponent,
+    DepositoDetalhesComponent,
+    DogwalkerDetalhesComponent,
+    ReclamacaoSugestaoComponent,
+    ReclamacaoSugestaoDetalhesComponent,
   ],
   imports: [
     FormsModule,
     CKEditorModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(AppRoutes,{}),
-    ToastrModule.forRoot(),
+    ToastrModule.forRoot({
+      timeOut: 3000,
+      positionClass: 'toast-bottom-left',
+      preventDuplicates: true,
+    }),
   ],
   providers: [
     LoginService

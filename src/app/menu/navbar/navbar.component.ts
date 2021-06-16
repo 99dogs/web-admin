@@ -2,7 +2,6 @@ import { Component, OnInit, Renderer2, ViewChild, ElementRef } from '@angular/co
 import { ROUTES } from '../sidebar/sidebar.component';
 import { Router } from '@angular/router';
 import { Location} from '@angular/common';
-import { title } from 'process';
 
 @Component({
   selector: 'app-navbar',
@@ -35,16 +34,22 @@ export class NavbarComponent implements OnInit{
        });
     }
     getTitle(){
-      var titlee = this.location.prepareExternalUrl(this.location.path());
-      if(titlee.charAt(0) === '/'){
-          titlee = titlee.slice( 1 );
+
+      let titlePath = this.location.prepareExternalUrl(this.location.path());
+      let titleArray = []
+
+      if(titlePath.charAt(0) === '/'){
+        titleArray = titlePath.split('/');        
       }
+
       for(var item = 0; item < this.listTitles.length; item++){
-          if(this.listTitles[item].path === titlee){
-              return this.listTitles[item].title;
-          }
+        if(this.listTitles[item].path === "/" + titleArray[1]){
+          return this.listTitles[item].title;
+        }
       }
+
       return 'Dashboard';
+
     }
     sidebarToggle() {
         if (this.sidebarVisible === false) {

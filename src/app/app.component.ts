@@ -10,7 +10,7 @@ import { LoginService } from './services/login/login.service';
 
 export class AppComponent{
 
-  public usuarioLogado: boolean = true;
+  public usuarioLogado: boolean = false;
 
   constructor(private loginService: LoginService, private router: Router){}
 

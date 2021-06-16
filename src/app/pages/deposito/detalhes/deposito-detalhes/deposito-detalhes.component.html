@@ -1,0 +1,70 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+				<a [routerLink]="['/deposito']"><button class="btn btn-default btn-sm pull-right"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> Voltar</button></a>
+                <h4 class="card-title"> Informações do depósito #{{depositoId}}</h4>
+				<hr>
+            </div>
+            <div class="card-body">
+
+				<div class="table-responsive">
+                    <table class="table">
+                        <thead class=" text-primary">
+                            <th>Solicitado dia</th>
+							<th>Dog walker</th>
+							<th>Valor</th>
+                            <th>Fatura</th>
+                            <th>Situação</th>
+                        </thead>
+                        <tbody>
+							<td>15/06/2021 18:57h</td>
+							<td>Dog walker SRS</td>
+							<td>R$ XX,00</td>
+							<td><a href="#"><button class="btn btn-neutral btn-icon btn-fab"><i class="fa fa-file-pdf-o"></i></button></a></td>
+							<td><button class="btn btn-success btn-sm">Concluído</button></td>
+						</tbody>
+					</table>
+				</div>
+
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class=" text-primary">
+                            <th>Data</th>
+                            <th>Passeio ID</th>
+                            <th>Unitário</th>
+                            <th>Total</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>14/06/2021 12:30h</td>
+								<td>111</td>
+								<td>R$ 15,00</td>
+								<td>R$ 15,00</td>
+                            </tr>
+							<tr>
+                                <td>14/06/2021 13:30h</td>
+								<td>112</td>
+								<td>R$ 15,00</td>
+								<td>R$ 30,00</td>
+                            </tr>
+							<tr>
+                                <td>14/06/2021 14:30h</td>
+								<td>113</td>
+								<td>R$ 15,00</td>
+								<td>R$ 45,00</td>
+                            </tr>
+							<tr>
+                                <td>14/06/2021 15:30h</td>
+								<td>114</td>
+								<td>R$ 15,00</td>
+								<td>R$ 60,00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

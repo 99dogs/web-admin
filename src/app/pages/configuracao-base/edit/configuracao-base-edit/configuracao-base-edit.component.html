@@ -1,0 +1,30 @@
+<div class="row">
+	<div class="col-md-12">
+		<div class="card">
+			<div class="card-header">
+				<a [routerLink]="['/configuracao-base']"><button class="btn btn-default btn-sm pull-right"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> Voltar</button></a>
+				<h4 class="card-title text-center">Alterar configuração base</h4>
+				<hr>
+			</div>
+			<div class="card-body">
+
+				<form>
+					<div class="form-group">
+						<label for="precoTicket">Preço do ticket*</label>
+						<input [(ngModel)]="configuracaoBase.precoTicket" name="precoTicket" type="text" class="form-control" id="precoTicket" [value]="configuracaoBase.precoTicket">
+					</div>
+					<div class="form-group">
+						<label for="taxaPlataforma">Taxa da plataforma*</label>
+						<input [(ngModel)]="configuracaoBase.taxaPlataforma" name="taxaPlataforma" type="text" class="form-control" id="taxaPlataforma">
+					</div>
+					<div class="form-group">
+						<label for="valorMinimoDeposito">Valor mínimo para depósito*</label>
+						<input [(ngModel)]="configuracaoBase.valorMinimoDeposito" name="valorMinimoDeposito" type="text" class="form-control" id="valorMinimoDeposito">
+					</div>
+					<button type="submit" class="btn btn-success btn-block" (click)="atualizarInformacoes()">Alterar informações</button>
+				</form>
+
+			</div>
+		</div>
+	</div>
+</div>

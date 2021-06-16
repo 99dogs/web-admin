@@ -1,11 +1,16 @@
 import { Routes } from '@angular/router';
 import { ConfiguracaoBaseComponent } from './pages/configuracao-base/configuracao-base.component';
+import { ConfiguracaoBaseEditComponent } from './pages/configuracao-base/edit/configuracao-base-edit/configuracao-base-edit.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { DepositoComponent } from './pages/deposito/deposito.component';
+import { DepositoDetalhesComponent } from './pages/deposito/detalhes/deposito-detalhes/deposito-detalhes.component';
+import { DogwalkerDetalhesComponent } from './pages/dogwalker/detalhes/dogwalker-detalhes/dogwalker-detalhes.component';
 import { DogwalkerComponent } from './pages/dogwalker/dogwalker.component';
 import { FormaDePagamentoComponent } from './pages/forma-de-pagamento/forma-de-pagamento.component';
 import { LoginComponent } from './pages/login/login.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
+import { ReclamacaoSugestaoDetalhesComponent } from './pages/reclamacao-sugestao/detalhes/reclamacao-sugestao-detalhes/reclamacao-sugestao-detalhes.component';
+import { ReclamacaoSugestaoComponent } from './pages/reclamacao-sugestao/reclamacao-sugestao.component';
 import { TermosCondicoesComponent } from './pages/termos-condicoes/termos-condicoes.component';
 import { TicketComponent } from './pages/ticket/ticket.component';
 
@@ -13,12 +18,17 @@ export const AppRoutes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'configuracao-base', component: ConfiguracaoBaseComponent },
+  { path: 'configuracao-base/edit', component: ConfiguracaoBaseEditComponent },
   { path: 'termos-e-condicoes', component: TermosCondicoesComponent },
   { path: 'forma-de-pagamento', component: FormaDePagamentoComponent },
   { path: 'dogwalker', component: DogwalkerComponent },
+  { path: 'dogwalker/detalhes/:id', component: DogwalkerDetalhesComponent },
   { path: 'ticket', component: TicketComponent },
   { path: 'perfil', component: PerfilComponent },
   { path: 'deposito', component: DepositoComponent },
+  { path: 'deposito/detalhes/:id', component: DepositoDetalhesComponent },
+  { path: 'reclamacao-sugestao', component: ReclamacaoSugestaoComponent },
+  { path: 'reclamacao-sugestao/detalhes/:id', component: ReclamacaoSugestaoDetalhesComponent },
   { path: 'login', component: LoginComponent },
   { path: '**', redirectTo: 'dashboard' }
 ]
