@@ -1,0 +1,1 @@
+# App destinado para a administração da plataforma.

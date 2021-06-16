@@ -1,0 +1,13 @@
+<div class="sidebar-wrapper">
+    <div class="logo">
+        <img src="../../assets/img/logo_size.jpg" alt="Logo 99Dogs">
+    </div>
+    <ul class="nav">
+        <li *ngFor="let menuItem of menuItems" routerLinkActive="active" class="{{menuItem.class}}">
+            <a [routerLink]="[menuItem.path]">
+                <i class="fa {{menuItem.icon}}"></i>
+                <p>{{menuItem.title}}</p>
+            </a>
+        </li>
+    </ul>
+</div>
