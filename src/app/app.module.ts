@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ToastrModule } from "ngx-toastr";
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AppRoutes } from './app.routing';
@@ -13,11 +14,11 @@ import { ConfiguracaoBaseComponent } from './pages/configuracao-base/configuraca
 import { TermosCondicoesComponent } from './pages/termos-condicoes/termos-condicoes.component';
 import { DogwalkerComponent } from './pages/dogwalker/dogwalker.component';
 import { TicketComponent } from './pages/ticket/ticket.component';
-import { LogoutComponent } from './pages/logout/logout.component';
 import { LoginComponent } from './pages/login/login.component';
 import { FormaDePagamentoComponent } from './pages/forma-de-pagamento/forma-de-pagamento.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { DepositoComponent } from './pages/deposito/deposito.component';
+import { LoginService } from "./services/login/login.service";
 
 
 @NgModule({
@@ -30,19 +31,22 @@ import { DepositoComponent } from './pages/deposito/deposito.component';
     TermosCondicoesComponent,
     DogwalkerComponent,
     TicketComponent,
-    LogoutComponent,
     LoginComponent,
     FormaDePagamentoComponent,
     PerfilComponent,
     DepositoComponent,
   ],
   imports: [
+    FormsModule,
     CKEditorModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(AppRoutes,{}),
     ToastrModule.forRoot(),
   ],
-  providers: [],
+  providers: [
+    LoginService
+  ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

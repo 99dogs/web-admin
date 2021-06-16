@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { LoginService } from 'app/services/login/login.service';
 
 export interface RouteInfo {
     path: string;
@@ -15,47 +17,41 @@ export const ROUTES: RouteInfo[] = [
         class: '' 
     },
     {
-        path: 'configuracao-base',
+        path: '/configuracao-base',
         title: 'Configuração base',
         icon: 'fa-cogs',
         class: ''
     },
     {
-        path: 'termos-e-condicoes',
+        path: '/termos-e-condicoes',
         title: 'Termos e condições',
         icon: 'fa-file-pdf-o',
         class: ''
     },
     {
-        path: 'forma-de-pagamento',
+        path: '/forma-de-pagamento',
         title: 'Formas de pagamento',
         icon: 'fa-credit-card',
         class: ''
     },
     {
-        path: 'dogwalker',
+        path: '/dogwalker',
         title: 'Dog walkers',
         icon: 'fa-paw',
         class: ''
     },
     {
-        path: 'ticket',
+        path: '/ticket',
         title: 'Tickets',
         icon: 'fa-ticket',
         class: ''
     },
     {
-        path: 'deposito',
+        path: '/deposito',
         title: 'Depósitos',
         icon: 'fa-bank',
         class: ''
     },
-    {
-        path: 'logout',
-        title: 'Sair do sistema',
-        icon: 'fa-sign-out',
-        class: 'last-child'
-    }
 ];
 
 @Component({
@@ -65,8 +61,17 @@ export const ROUTES: RouteInfo[] = [
   })
 
 export class SidebarComponent implements OnInit {
+
+    constructor(private loginService: LoginService, private router: Router){}
+
     public menuItems: any[];
     ngOnInit() {
         this.menuItems = ROUTES.filter(menuItem => menuItem);
     }
+
+    deslogar(){
+        this.loginService.usuarioLogadoEmitter.emit(false)
+        this.router.navigate(['/login'])
+    }
+
 }
