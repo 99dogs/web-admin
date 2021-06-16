@@ -1,19 +1,16 @@
-<div class="wrapper" *ngIf="usuarioLogado == true">
-    <div class="sidebar" data-color="white" data-active-color="danger">
+<div class="wrapper">
+
+    <div class="sidebar" data-color="white" data-active-color="danger" *ngIf="usuarioLogado == true">
         <app-sidebar></app-sidebar>
     </div>
-    <div class="main-panel">
-        <app-navbar></app-navbar>
-        <div class="content">
-            <router-outlet></router-outlet>
-        </div>
-    </div>
-</div>
 
-<div class="wrapper" *ngIf="usuarioLogado == false">
-    <div class="main-panel" style="width: 100vw!important;height: 100vh!important;">
+    <div [ngClass]="usuarioLogado == true ? 'main-panel' : 'main-panel-login' ">
+
+        <app-navbar *ngIf="usuarioLogado == true"></app-navbar>
+
         <div class="content">
             <router-outlet></router-outlet>
         </div>
+
     </div>
 </div>

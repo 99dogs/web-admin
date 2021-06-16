@@ -17,6 +17,8 @@ export class LoginService {
 
     if(usuario.email === "admin@admin.com.br" && usuario.senha === "123"){
       this.usuarioAutenticado = true 
+    }else{
+      this.usuarioAutenticado = false
     }
 
     this.usuarioLogadoEmitter.emit(this.usuarioAutenticado)
