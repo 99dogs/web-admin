@@ -9,7 +9,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class ConfiguracaoBaseEditComponent implements OnInit {
 
-  private configuracaoBase: ConfiguracaoBaseModel = new ConfiguracaoBaseModel()
+  public configuracaoBase: ConfiguracaoBaseModel = new ConfiguracaoBaseModel()
 
   constructor(private toastrService: ToastrService) { }
 

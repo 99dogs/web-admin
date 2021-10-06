@@ -9,7 +9,7 @@ import { ActivatedRoute  } from '@angular/router';
 export class DepositoDetalhesComponent implements OnInit {
 
   constructor(private route: ActivatedRoute ) { }
-  private depositoId: number = 0
+  public depositoId: number = 0
 
   ngOnInit(): void {
     this.route.params.subscribe(param => {

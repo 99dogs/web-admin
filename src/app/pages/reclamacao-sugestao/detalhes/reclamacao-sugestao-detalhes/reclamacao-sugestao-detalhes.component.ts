@@ -10,7 +10,7 @@ export class ReclamacaoSugestaoDetalhesComponent implements OnInit {
 
   constructor(private route: ActivatedRoute) { }
 
-  private itemId: number = 0
+  public itemId: number = 0
 
   ngOnInit(): void {
     this.route.params.subscribe(param => {

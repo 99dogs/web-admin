@@ -10,7 +10,7 @@ import { LoginService } from 'app/services/login/login.service';
 })
 export class LoginComponent implements OnInit {
 
-  private usuario: UsuarioModel = new UsuarioModel()
+  public usuario: UsuarioModel = new UsuarioModel()
 
   constructor(private loginService: LoginService, private router: Router) { }
 

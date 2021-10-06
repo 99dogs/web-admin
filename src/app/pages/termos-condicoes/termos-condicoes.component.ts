@@ -14,7 +14,7 @@ export class TermosCondicoesComponent implements OnInit {
 
   public Editor = ClassicEditor;
 
-  private termosCondicoes: TermosCondicoesModel = new TermosCondicoesModel()
+  public termosCondicoes: TermosCondicoesModel = new TermosCondicoesModel()
 
   ngOnInit(): void {
     this.termosCondicoes.texto = "<h4>1. Relacionamento Contratual</h4><h4>2. Os Serviços</h4><h4>3. Uso dos Serviços</h4><h4>4. Pagamento</h4><h4>5. Recusa de Garantia; Limitação de Responsabilidade; Indenização.</h4><h4>6. SOLUÇÃO DE CONTROVÉRSIAS</h4><h4>7. Legislação Aplicável; Jurisdição.</h4><h4>8. Outras Disposições</h4>"
