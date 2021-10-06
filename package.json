@@ -1,24 +1,22 @@
 {
-  "name": "admin-99dogs",
+  "name": "paper-dashboard-angular",
   "version": "2.2.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
-    "postinstall": "ng build --aot --configuration production"
+    "start": "node server.js",
+    "heroku-postbuild": "ng build --aot --configuration production"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "10.1.5",
-    "@angular/cli": "^12.2.8",
     "@angular/common": "10.1.5",
     "@angular/compiler": "10.1.5",
-    "@angular/compiler-cli": "^10.1.5",
     "@angular/core": "10.1.5",
     "@angular/forms": "10.1.5",
     "@angular/localize": "^10.1.5",
@@ -36,25 +34,24 @@
     "chart.js": "^3.3.2",
     "chartist": "0.11.4",
     "core-js": "3.6.5",
-    "express": "^4.17.1",
+    "express": "4.17.1",
     "jquery": "3.5.1",
     "moment": "2.29.1",
     "ngx-toastr": "13.1.0",
-    "path": "^0.12.7",
     "rxjs": "6.6.3",
     "tslib": "2.0.2",
-    "typescript": "4.0.3",
     "zone.js": "0.11.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "0.1001.5",
+    "@angular/cli": "^12.2.8",
+    "@angular/compiler-cli": "^10.1.5",
     "@types/bootstrap": "5.0.0",
     "@types/chartist": "0.11.0",
     "@types/jasmine": "3.5.14",
     "@types/jquery": "3.5.2",
     "@types/node": "14.11.5",
     "codelyzer": "6.0.1",
-    "enhanced-resolve": "^5.8.3",
     "jasmine-core": "3.6.0",
     "jasmine-spec-reporter": "6.0.0",
     "karma": "5.2.3",
@@ -65,7 +62,8 @@
     "karma-jasmine-html-reporter": "1.5.4",
     "protractor": "7.0.0",
     "ts-node": "9.0.0",
-    "tslint": "6.1.3"
+    "tslint": "6.1.3",
+    "typescript": "4.0.3"
   },
   "engines": {
     "node": "14.17.0",
